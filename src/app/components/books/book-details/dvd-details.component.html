@@ -1,0 +1,14 @@
+<div class="container">
+    <h2>{{model.id ? "Edit Book" : "New Dvd"}}</h2>
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" class="form-control" id="title" placeholder="Inserisci il titolo" [(ngModel)]="model.title">
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Director</label>
+        <input type="text" class="form-control" id="description" placeholder="Inserisci il regista" [(ngModel)]="model.director">
+      </div>
+      <br/>
+      <button type="submit" class="btn btn-primary" (click)="save()">{{model.id ? "Edit" : "Save"}}</button>
+  </div>
+  
